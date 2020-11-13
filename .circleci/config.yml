@@ -14,3 +14,5 @@ jobs:
     steps:
       - checkout
       - run: systeminfo
+      - run: nuget ?
+      - run: msbuild -help
