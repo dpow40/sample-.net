@@ -21,5 +21,6 @@ jobs:
           command: |
            $ProgressPreference = "SilentlyContinue"
            Compress-Archive -Path .\sample\sample\bin -DestinationPath .\sample\archive
+      - run: ls .\sample
       - store_artifacts:
           path: .\sample\archive
