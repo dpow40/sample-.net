@@ -18,6 +18,6 @@ jobs:
       - run: msbuild .\sample
       - run:  
           name: Compressing Files
-          command: Compress-Archive -Path .\sample\sample\bin -DestinationPath .\archive
+          command: Compress-Archive -Path .\sample\sample\bin -DestinationPath .\sample\archive
       - store_artifacts:
-          path: .\archive
+          path: .\sample\archive
