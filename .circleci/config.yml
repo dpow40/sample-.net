@@ -16,3 +16,5 @@ jobs:
       - run: systeminfo
       - run: nuget restore .\sample
       - run: msbuild .\sample
+      - store_artifacts:
+          path: .\sample\bin
