@@ -14,5 +14,6 @@ jobs:
     steps:
       - checkout
       - run: systeminfo
-      - run: nuget restore
+      - run: ls
+      - run: nuget restore .\sample
       - run: msbuild
