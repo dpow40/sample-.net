@@ -16,5 +16,8 @@ jobs:
       - run: systeminfo
       - run: nuget restore .\sample
       - run: msbuild .\sample
+      - run:  
+          name: Compressing Files
+          command: Compress-Archive -Path .\sample\sample\bin -DestinationPath .\archive
       - store_artifacts:
-          path: .\sample\sample\bin
+          path: .\archive
