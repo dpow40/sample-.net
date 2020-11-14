@@ -18,6 +18,8 @@ jobs:
       - run: msbuild .\sample
       - run:  
           name: Compressing Files
-          command: Compress-Archive -Path .\sample\sample\bin -DestinationPath .\sample\archive
+          command: |
+           $ProgressPreference = "SilentlyContinue"
+           Compress-Archive -Path .\sample\sample\bin -DestinationPath .\sample\archive
       - store_artifacts:
           path: .\sample\archive
